@@ -4,18 +4,18 @@
 
 <!-- Add a paragraph about the project. What does it do? Who is it for? Is it actively supported? Your reader just clicked on a random link from another web page and has no idea what Nexmo is ... -->
 
-## Welcome to Nexmo
+## Welcome to Vonage
 
 <!-- change "github-repo" at the end of the link to be the name of your repo, this helps us understand which projects are driving signups so we can do more stuff that developers love -->
 
-If you're new to Nexmo, you can [sign up for a Nexmo account](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=receive-dlr-aspnet-core) and get some free credit to get you started.
+If you're new to Vonage, you can [sign up for a Vonage account](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=receive-dlr-aspnet-core) and get some free credit to get you started.
 
 ## Prerequisites
 
 * You'll need a Vonage API account. You can [sign up here](https://dashboard.nexmo.com/sign-up)
 * You'll need the latest version of the [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * You'll need either Visual Studio 2019, Visual Studio for Mac, or Visual Studio Code, I will be using Visual Studio Code for this Demo
-* I'm going to be sending an SMS message with the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli). You can use that or you could even [add your own send logic to this app](https://developer.nexmo.com/messaging/sms/code-snippets/send-an-sms/dotnet)!
+* I'm going to be sending an SMS message with the [Vonage CLI](https://github.com/Nexmo/nexmo-cli). You can use that or you could even [add your own send logic to this app](https://developer.nexmo.com/messaging/sms/code-snippets/send-an-sms/dotnet)!
 * Optional - I used [Ngrok](https://developer.nexmo.com/tools/ngrok) to test this demo
 
 ## Testing
@@ -39,8 +39,8 @@ To do this, navigate to https://dashboard.nexmo.com/settings. Under Default SMS 
 We love to hear from you so if you have questions, comments or find a bug in the project, let us know! You can either:
 
 * Open an issue on this repository
-* Tweet at us! We're [@NexmoDev on Twitter](https://twitter.com/NexmoDev)
-* Or [join the Nexmo Community Slack](https://developer.nexmo.com/community/slack)
+* Tweet at us! We're [@VonageDev on Twitter](https://twitter.com/VonageDev)
+* Or [join the Vonage Community Slack](https://developer.nexmo.com/community/slack)
 
 ## Further Reading
 
