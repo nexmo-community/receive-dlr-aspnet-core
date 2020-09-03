@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ReceiveDlrAspNet.Models;
-using Nexmo.Api.Messaging;
+using Vonage.Messaging;
+using Vonage.Utility;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -39,19 +40,14 @@ namespace ReceiveDlrAspNet.Controllers
 
         [HttpPost("/webhooks/dlr")]
         public async Task<IActionResult> HandleDlr()
-        {
-            using(var reader = new System.IO.StreamReader(Request.Body))
-            {
-                var json = await reader.ReadToEndAsync();
-                var dlr = JsonConvert.DeserializeObject<DeliveryReceipt>(json);
-                Console.WriteLine("***********DLR**************");                
-                Console.WriteLine(dlr.MessageTimestamp);
-                Console.WriteLine(dlr.Msisdn);
-                Console.WriteLine(dlr.To);
-                Console.WriteLine(dlr.MessageId);
-                Console.WriteLine("***********END**************");
-                
-            }
+        {            
+            var dlr = WebhookParser.ParseWebhook<DeliveryReceipt>(Request.Body,Request.ContentType);
+            Console.WriteLine("***********DLR**************");
+            Console.WriteLine(dlr.MessageTimestamp);
+            Console.WriteLine(dlr.Msisdn);
+            Console.WriteLine(dlr.To);
+            Console.WriteLine(dlr.MessageId);
+            Console.WriteLine("***********END**************");
             return NoContent();
         }
     }
